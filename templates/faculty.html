@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Faculty - School of Management</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-dark bg-primary">
+
+<div class="container">
+
+<a class="navbar-brand">
+AKU - School of Management
+</a>
+
+</div>
+
+</nav>
+
+
+<section class="py-5">
+
+<div class="container">
+
+
+<h1 class="text-center mb-5">
+Our Faculty
+</h1>
+
+
+<div class="row">
+
+
+{% for faculty in faculties %}
+
+
+<div class="col-md-4 mb-4">
+
+
+<div class="card shadow h-100">
+
+
+<img src="{{ faculty.photo.url }}"
+class="card-img-top"
+height="300"
+style="object-fit:cover;">
+
+
+<div class="card-body">
+
+<h5>
+{{ faculty.name }}
+</h5>
+
+<p>
+{{ faculty.designation }}
+</p>
+
+<p>
+{{ faculty.qualification }}
+</p>
+
+<p>
+{{ faculty.email }}
+</p>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+{% endfor %}
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+</body>
+</html>
