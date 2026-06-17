@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-x6_=6$&&x2_*s(rt_#*5q^-!1gz0ix!7#-g+0qs!h*2+1^6-$3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "aku-mba.onrender.com",
+    "localhost",
+    "127.0.0.1"
+]
 
 
 # Application definition
@@ -129,3 +133,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://aku-mba.onrender.com"
+]
