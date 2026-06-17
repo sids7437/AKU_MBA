@@ -1,0 +1,203 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.hero-section{
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.hero-section h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero-section p{
+    font-size: 20px;
+}
+
+/* Navbar Logo */
+
+.navbar-brand {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Hero Section Improvement */
+
+.hero-section{
+    padding: 100px 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('/static/images/mba_banner.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+    text-align: center;
+}
+
+
+.hero-section h1{
+    font-size: 55px;
+    font-weight: bold;
+}
+
+
+.hero-section h3{
+    font-size: 30px;
+}
+
+
+.hero-section p{
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+
+.hero-section .btn{
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 18px;
+}
+
+.card{
+    transition: 0.3s;
+}
+
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+/* Chatbot Floating Button */
+
+.chatbot-btn{
+
+    position: fixed;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    background: #0d6efd;
+
+    color: white;
+
+    padding: 15px 20px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    z-index: 999;
+
+}
+
+
+.chatbot-btn:hover{
+
+    background:#084298;
+
+    color:white;
+
+}
+
+/* Chatbot Popup */
+
+
+.chatbot-btn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    background:#0d6efd;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+}
+
+
+
+#chatbot-window{
+
+    display:none;
+
+    position:fixed;
+
+    bottom:90px;
+
+    right:25px;
+
+    width:380px;
+
+    height:550px;
+
+    background:white;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 25px rgba(0,0,0,0.3);
+
+    overflow:hidden;
+
+    z-index:9999;
+
+}
+
+
+
+.chat-header{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-radius:10px 10px 0 0;
+
+}
+
+
+
+#chatbot-window iframe{
+
+    width:100%;
+
+    height:calc(100% - 50px);
+
+}
