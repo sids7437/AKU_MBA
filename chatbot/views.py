@@ -1,4 +1,8 @@
 from django.shortcuts import render
+import json
+from django.http import JsonResponse
+from django.http import HttpResponse
+
 
 from .models import (
     Syllabus,
@@ -485,33 +489,19 @@ def chatbot(request):
             answer += "\nNo syllabus data available."
 
 
+        
 
+    if request.method == "POST":
 
-
-        # Save Chat
-
-        ChatHistory.objects.create(
-            question=question,
-            answer=answer
+        return HttpResponse(
+            answer.replace("\n", "<br>")
         )
-
-
-
-
-    chats = ChatHistory.objects.all().order_by(
-        "created_at"
-    )
-
 
 
     return render(
         request,
-        "chatbot/chatbot.html",
-        {
-            "answer": answer,
-            "chats": chats
-        }
-    )
+        "chatbot/chatbot.html"
+    )   
 
 def syllabus_view(request, specialization):
 
